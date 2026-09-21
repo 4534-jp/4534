@@ -44,7 +44,7 @@ button,input,textarea{font:inherit}
 .button-dark{background:var(--dark);color:#fff}
 .button-outline{background:transparent}
 .button-light{border-color:#fff;color:#fff}
-.hero-visual{min-height:500px;background-image:linear-gradient(90deg,rgba(35,30,26,.04),rgba(35,30,26,.12)),url("main.jpg");background-size:cover;background-position:center;display:grid;place-items:center}
+.hero-visual{min-height:500px;background-image:linear-gradient(90deg,rgba(35,30,26,.04),rgba(35,30,26,.12)),url("images/main.jpg");background-size:cover;background-position:center;display:grid;place-items:center}
 .quick-links{max-width:1240px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid var(--line);border-bottom:1px solid var(--line)}
 .quick-links a{padding:23px 22px;text-decoration:none;border-right:1px solid var(--line);background:var(--white)}
 .quick-links a:hover{background:var(--paper-deep)}
