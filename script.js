@@ -5,8 +5,25 @@ const socialLinks = [
   // { label: "Facebook", url: "" },
 ];
 
-const socialContainer = document.querySelector("#social-links");
-if (socialContainer && socialLinks.length) {
+async function loadComponents() {
+  const components = document.querySelectorAll("[data-component]");
+
+  await Promise.all(
+    [...components].map(async (container) => {
+      const name = container.dataset.component;
+      if (!name) return;
+
+      const response = await fetch(`components/${name}.html`);
+      if (!response.ok) throw new Error(`Failed to load component: ${name}`);
+      container.outerHTML = await response.text();
+    }),
+  );
+}
+
+function initSocialLinks() {
+  const socialContainer = document.querySelector("#social-links");
+  if (!socialContainer || !socialLinks.length) return;
+
   socialLinks.forEach(({ label, url }) => {
     if (!url) return;
     const a = document.createElement("a");
@@ -18,13 +35,15 @@ if (socialContainer && socialLinks.length) {
   });
 }
 
+function initDesktopPhoneCopy() {
+  const phoneLink = document.querySelector(".contact-phone");
+  if (!phoneLink || ("ontouchstart" in window)) return;
 
-const phoneLink = document.querySelector(".contact-phone");
-if (phoneLink && !("ontouchstart" in window)) {
   phoneLink.setAttribute("href", "#");
   phoneLink.addEventListener("click", async (event) => {
     event.preventDefault();
     const phoneNumber = phoneLink.dataset.phone;
+
     try {
       await navigator.clipboard.writeText(phoneNumber);
       const label = phoneLink.querySelector(".phone-label");
@@ -37,3 +56,12 @@ if (phoneLink && !("ontouchstart" in window)) {
     }
   });
 }
+
+loadComponents()
+  .then(() => {
+    initSocialLinks();
+    initDesktopPhoneCopy();
+  })
+  .catch((error) => {
+    console.error(error);
+  });
