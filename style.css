@@ -191,3 +191,9 @@ button,input,textarea{font:inherit}
 
 /* 5-item main navigation */
 .main-nav{grid-template-columns:repeat(5,1fr)}
+
+
+/* TimeTree calendar */
+.calendar-embed{width:100%;background:var(--white);border:1px solid var(--line);overflow:hidden}
+.calendar-embed iframe{display:block;width:100%;min-height:700px;aspect-ratio:680/720;border:0}
+@media(max-width:600px){.calendar-embed iframe{min-height:620px;aspect-ratio:auto;height:calc(100vh - 180px);max-height:760px}}
