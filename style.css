@@ -156,8 +156,8 @@ button,input,textarea{font:inherit}
   .header-call{padding:7px 10px}
   .header-call span{font-size:.6rem}
   .header-call strong{font-size:.82rem}
-  .main-nav{gap:17px}
-  .main-nav a{font-size:.8rem}
+  .main-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;width:100%;overflow:visible;padding-bottom:0}
+  .main-nav a{font-size:.72rem;text-align:center;padding:8px 0;letter-spacing:-.02em}
   .hero-copy{padding:54px 20px}
   .hero h1{font-size:2.25rem}
   .hero-visual{min-height:330px}
