@@ -64,7 +64,7 @@ button,input,textarea{font:inherit}
 .space-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:18px}
 .space-card{background:var(--white);border:1px solid var(--line)}
 .space-card-main{grid-row:span 2}
-.space-photo{height:230px;display:grid;place-items:end start;padding:14px 16px;color:#fff;background-size:cover;background-position:center}
+.space-photo{height:230px;overflow:hidden;background:#eee}.space-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
 .space-card-main .space-photo{height:390px}
 .photo-hall{background:linear-gradient(145deg,#6f6458,#b7aa98 52%,#4d463f)}
 .photo-west{background:linear-gradient(145deg,#c2b5a4,#827668)}
