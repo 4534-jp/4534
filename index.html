@@ -3,91 +3,146 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="4534 — Independent Digital Studio">
-<title>4534. — Ideas in motion.</title>
+<meta name="description" content="4534 — ChatGPT × GitHubで、どこまでWebを作れるか。">
+<meta name="theme-color" content="#f4f1e8">
+<title>4534. — Built with ChatGPT × GitHub</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="cursor" aria-hidden="true"></div>
+
 <header class="header">
-  <a class="logo" href="#home">4534<span>.</span></a>
-  <nav aria-label="Main navigation">
-    <a href="#work">WORK</a>
-    <a href="#about">ABOUT</a>
+  <a class="logo" href="#top">4534<span>.</span></a>
+  <nav>
+    <a href="#showcase">SHOWCASE</a>
+    <a href="#features">FEATURES</a>
     <a href="#lab">LAB</a>
-    <a href="#contact">CONTACT</a>
+    <a href="#about">ABOUT</a>
   </nav>
-  <button class="theme" type="button" aria-label="ダークモードに切り替え" aria-pressed="false"><span>◐</span></button>
+  <div class="header-actions">
+    <button class="command" type="button" aria-label="コマンドパレットを開く">⌘ K</button>
+    <button class="theme" type="button" aria-label="ダークモードに切り替え" aria-pressed="false"><span>◐</span></button>
+  </div>
 </header>
 
-<main id="home">
+<main id="top">
   <section class="hero">
-    <div class="studio-info">
-      <span>INDEPENDENT DIGITAL STUDIO</span>
-      <span>JAPAN / 2026</span>
+    <div class="hero-kicker"><span>AN EXPERIMENT</span><span>CHATGPT × GITHUB</span></div>
+    <div class="hero-copy">
+      <p class="eyebrow">THIS WEBSITE IS THE DEMO.</p>
+      <h1>How far can<br><i>ChatGPT</i><br>build on GitHub?</h1>
+      <p class="hero-lead">コードを書くだけじゃない。構成、デザイン、インタラクション、修正まで。GitHub上のコードから、ひとつのWeb体験を組み立ててみる。</p>
+      <div class="hero-actions">
+        <a class="button" href="#showcase">Explore the build <span>↘</span></a>
+        <button class="text-button" type="button" data-open-command>Try something <span>⌘ K</span></button>
+      </div>
     </div>
-
-    <div class="hero-left">
-      <div class="mark">4534</div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="visual-ring ring-one"></div>
+      <div class="visual-ring ring-two"></div>
+      <div class="visual-core"><span>AI</span><b>×</b><span>CODE</span></div>
+      <div class="orbit-label label-top">DESIGN</div>
+      <div class="orbit-label label-right">BUILD</div>
+      <div class="orbit-label label-bottom">SHIP</div>
+      <div class="orbit-label label-left">REPEAT</div>
     </div>
-
-    <div class="hero-right">
-      <p class="eyebrow">DESIGN • CODE • EXPERIMENT</p>
-      <h1>Ideas<br><i>in motion.</i></h1>
-      <p class="lead">Webを使って、アイデアを「動くもの」に変える。デザインとコードの境界を行き来しながら、小さな実験からプロダクトまで制作します。</p>
-      <a class="hero-button" href="#work">Explore work <span>↘</span></a>
-    </div>
-
-    <div class="hero-orbit" aria-hidden="true"><span>4534</span></div>
+    <div class="hero-note">SCROLL TO SEE<br>WHAT'S INSIDE ↓</div>
   </section>
 
-  <div class="ticker"><div>CREATE / TEST / SHIP / CREATE / TEST / SHIP / CREATE / TEST / SHIP /</div></div>
+  <div class="ticker"><div>IDEA → CODE → UI → INTERACTION → ITERATE → PUBLISH → IDEA → CODE → UI → INTERACTION → ITERATE → PUBLISH →</div></div>
 
-  <section id="work" class="section">
-    <div class="heading"><span>01 — SELECTED WORK</span><h2>つくったもの。</h2></div>
-    <div class="works">
-      <article class="work-card work-main">
-        <div class="visual visual-black"><small>01</small><strong>NEON<br>GRID</strong></div>
-        <div class="work-text"><div><span>WEB EXPERIENCE</span><span>2026</span></div><h3>Neon Grid</h3><p>大胆なタイポグラフィとグリッドを使った、実験的なランディングページ。</p><button data-project="Neon Grid">VIEW CASE ↗</button></div>
+  <section id="showcase" class="section showcase">
+    <div class="section-head">
+      <div><span class="index">01</span><p>THE SHOWCASE</p></div>
+      <h2>GitHubの中身を、<br><i>Web体験にする。</i></h2>
+    </div>
+    <div class="showcase-grid">
+      <article class="feature-card feature-main reveal">
+        <div class="card-number">01</div>
+        <div class="card-graphic browser"><div class="browser-bar"><i></i><i></i><i></i></div><div class="browser-body"><span>4534.</span><strong>Ideas<br>→ Motion</strong><em>HTML / CSS / JS</em></div></div>
+        <div class="card-copy"><span>01 / FRONTEND</span><h3>ゼロからサイトを設計</h3><p>ページ構成、タイポグラフィ、レスポンシブ設計まで。静的なコードでも、プロダクトらしい体験を作れる。</p></div>
       </article>
-      <article class="work-card">
-        <div class="visual visual-gray"><small>02</small><strong>DATA<br>FLOW</strong></div>
-        <div class="work-text"><div><span>DASHBOARD</span><span>2026</span></div><h3>Data Flow</h3><p>複雑な情報を視覚的に整理するダッシュボードUI。</p><button data-project="Data Flow">VIEW CASE ↗</button></div>
+      <article class="feature-card reveal">
+        <div class="card-number">02</div>
+        <div class="card-graphic code"><span>&lt;section&gt;</span><b>build( )</b><span>interactive</span><small>→ shipped</small></div>
+        <div class="card-copy"><span>02 / CODE</span><h3>機能もコードで追加</h3><p>テーマ切替、モーダル、キーボード操作、Canvasなど、ブラウザで動く機能を実装。</p></div>
       </article>
-      <article class="work-card">
-        <div class="visual visual-blue"><small>03</small><strong>MICRO<br>LAB</strong></div>
-        <div class="work-text"><div><span>INTERACTION</span><span>2026</span></div><h3>Micro Lab</h3><p>ブラウザの中で動く、小さなインタラクションの実験集。</p><button data-project="Micro Lab">VIEW CASE ↗</button></div>
+      <article class="feature-card reveal">
+        <div class="card-number">03</div>
+        <div class="card-graphic data"><div class="bars"><i></i><i></i><i></i><i></i><i></i></div><span>DATA → VISUAL</span></div>
+        <div class="card-copy"><span>03 / VISUAL</span><h3>データを視覚化</h3><p>数字や状態をただ並べるのではなく、動きと構造を持ったUIとして見せられる。</p></div>
       </article>
     </div>
   </section>
 
-  <section id="about" class="dark-section">
-    <div class="section heading-wrap">
-      <div class="heading"><span>02 — ABOUT</span><h2>小さく作って、<br>大きく育てる。</h2></div>
-      <div class="about-grid"><p>4534は、Webデザインとフロントエンド開発を中心に、アイデアのプロトタイピングを行う個人スタジオです。</p><div class="facts"><div><span>FOCUS</span><b>Web / UI / Code</b></div><div><span>PROCESS</span><b>Think → Make → Test</b></div><div><span>LOCATION</span><b>Japan</b></div></div></div>
+  <section id="features" class="dark-section">
+    <div class="section section-tight">
+      <div class="section-head light">
+        <div><span class="index">02</span><p>WHAT'S POSSIBLE</p></div>
+        <h2>「コードだけ」ではない。</h2>
+      </div>
+      <div class="feature-list">
+        <div class="feature-row reveal"><span>01</span><h3>Responsive</h3><p>PC / タブレット / スマートフォンをひとつのコードベースで設計。</p><b>↗</b></div>
+        <div class="feature-row reveal"><span>02</span><h3>Interactive</h3><p>マウス、タッチ、キーボードに反応するインタラクションを追加。</p><b>↗</b></div>
+        <div class="feature-row reveal"><span>03</span><h3>Visual System</h3><p>色、余白、タイポグラフィ、モーションをルールとしてまとめる。</p><b>↗</b></div>
+        <div class="feature-row reveal"><span>04</span><h3>Iterate</h3><p>「動かない」「レイアウトが崩れた」からでも、コードを読んで直していく。</p><b>↗</b></div>
+      </div>
     </div>
   </section>
 
-  <section id="lab" class="section">
-    <div class="heading"><span>03 — LAB</span><h2>実験室。</h2></div>
-    <div class="lab"><div class="lab-copy"><span>INTERACTIVE</span><h3>Move your cursor.</h3><p>カーソルやタッチに反応するフィールドです。</p></div><canvas id="canvas"></canvas></div>
-  </section>
-
-  <section class="section capabilities">
-    <div class="heading"><span>04 — CAPABILITIES</span><h2>できること。</h2></div>
-    <div class="capabilities-grid">
-      <div><span>01</span><h3>Direction</h3><p>コンセプト、情報設計、体験設計。</p></div>
-      <div><span>02</span><h3>Design</h3><p>UI、タイポグラフィ、レスポンシブ設計。</p></div>
-      <div><span>03</span><h3>Development</h3><p>HTML / CSS / JavaScriptによる実装。</p></div>
-      <div><span>04</span><h3>Prototype</h3><p>アイデアを素早く動く形にして検証。</p></div>
+  <section id="lab" class="section lab-section">
+    <div class="section-head">
+      <div><span class="index">03</span><p>LIVE LAB</p></div>
+      <h2>ここでは、<br><i>実際に動く。</i></h2>
+    </div>
+    <div class="lab">
+      <div class="lab-top"><span>PARTICLE FIELD / 65 NODES</span><span>MOVE YOUR POINTER</span></div>
+      <canvas id="canvas"></canvas>
+      <div class="lab-center">MOVE<br><i>→</i></div>
+      <div class="lab-bottom"><span>HTML CANVAS</span><span>JAVASCRIPT</span><span>60 FPS*</span></div>
     </div>
   </section>
 
-  <section id="contact" class="contact"><span>05 — CONTACT</span><h2>何かを<br><i>つくろう。</i></h2><p>このサイトも、すべてGitHub上のコードからできています。</p><a class="hero-button" href="https://github.com/4534-jp/4534">GitHubへ ↗</a></section>
+  <section class="section architecture">
+    <div class="section-head">
+      <div><span class="index">04</span><p>UNDER THE HOOD</p></div>
+      <h2>仕組みは、<br><i>シンプル。</i></h2>
+    </div>
+    <div class="stack">
+      <div class="stack-line"><span>01</span><strong>HTML</strong><p>構造とコンテンツ</p><em>SEMANTIC</em></div>
+      <div class="stack-line"><span>02</span><strong>CSS</strong><p>レイアウトとビジュアル</p><em>RESPONSIVE</em></div>
+      <div class="stack-line"><span>03</span><strong>JAVASCRIPT</strong><p>動きとインタラクション</p><em>VANILLA</em></div>
+      <div class="stack-line"><span>04</span><strong>GITHUB</strong><p>コードを保存・公開</p><em>VERSIONED</em></div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="about-inner">
+      <p class="eyebrow">05 — THE POINT</p>
+      <h2>このページ自体が、<br><i>答えのひとつ。</i></h2>
+      <p class="about-copy">ChatGPTに「GitHubでどんなサイトを作れるか見てみたい」と伝える。そこからHTML、CSS、JavaScriptを組み、実際のリポジトリへ反映する。このサイトは、その制作プロセスを体験として見せるためのデモです。</p>
+      <div class="about-meta"><span>BUILT ON</span><strong>github.com/4534-jp/4534</strong><a href="https://github.com/4534-jp/4534">OPEN REPOSITORY ↗</a></div>
+    </div>
+  </section>
 </main>
 
-<footer><span>© 4534</span><span>BUILT WITH HTML / CSS / JS</span><a href="#home">BACK TO TOP ↑</a></footer>
+<footer><span>© 4534.</span><span>CHATGPT × GITHUB / 2026</span><a href="#top">BACK TO TOP ↑</a></footer>
 
-<div class="modal" aria-hidden="true"><div class="modal-box"><button class="close" type="button" aria-label="閉じる">×</button><span>CASE STUDY</span><h3 id="modal-title">Project</h3><p>これはデモ用のケーススタディです。目的・設計・実装・検証までを一つのWeb体験として構成できます。</p><hr><div><span>ROLE</span><b>DESIGN / DEVELOPMENT</b></div><div><span>STACK</span><b>HTML / CSS / JAVASCRIPT</b></div></div></div>
+<div class="modal" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="close" type="button" aria-label="閉じる">×</button>
+    <span>COMMAND PALETTE</span>
+    <h3 id="modal-title">What do you want to explore?</h3>
+    <div class="commands">
+      <button data-jump="#showcase"><b>SHOWCASE</b><span>サイトの構成を見る ↗</span></button>
+      <button data-jump="#features"><b>FEATURES</b><span>実装できる機能を見る ↗</span></button>
+      <button data-jump="#lab"><b>LIVE LAB</b><span>インタラクションを試す ↗</span></button>
+      <button data-jump="#about"><b>ABOUT</b><span>このサイトについて ↗</span></button>
+    </div>
+    <small>ESC で閉じる</small>
+  </div>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>
