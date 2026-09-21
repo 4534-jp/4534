@@ -142,7 +142,6 @@ button,input,textarea{font:inherit}
   .quick-links a{padding:18px 16px}
   .section{padding:70px 20px}
   .section-tinted{padding-left:20px;padding-right:20px}
-    .event-card{grid-template-columns:1fr;gap:6px}
   .cafe-inner{padding:65px 20px}
   .price-group summary{align-items:flex-start}
   .price-group summary small{display:none}
