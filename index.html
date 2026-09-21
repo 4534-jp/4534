@@ -2,42 +2,157 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="4534 — digital studio">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="4534 — Digital Studio">
+<meta name="theme-color" content="#f3f1eb">
 <title>4534 — Digital Studio</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="noise"></div>
-<header class="header">
-  <a class="brand" href="#top">4534<span>.</span></a>
-  <nav><a href="#work">WORK</a><a href="#about">ABOUT</a><a href="#lab">LAB</a><a href="#contact">CONTACT</a></nav>
-  <button class="theme" aria-label="テーマ切替">◐</button>
+<div class="site-noise" aria-hidden="true"></div>
+
+<header class="site-header">
+  <a class="logo" href="#top" aria-label="4534 home">4534<span>.</span></a>
+  <nav class="nav" aria-label="メインナビゲーション">
+    <a href="#work">WORK</a>
+    <a href="#about">ABOUT</a>
+    <a href="#lab">LAB</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+  <button class="theme-toggle" type="button" aria-label="ダークモードに切り替え" aria-pressed="false">
+    <span class="theme-icon" aria-hidden="true">◐</span>
+  </button>
 </header>
+
 <main id="top">
-<section class="hero">
-  <div class="hero-meta"><span>INDEPENDENT DIGITAL STUDIO</span><span>JAPAN / 2026</span></div>
-  <div class="hero-title"><p class="kicker">DESIGN × CODE × EXPERIMENT</p><h1>Ideas<br><em>in motion.</em></h1><p class="intro">Webを使って、アイデアを「動くもの」に変える。デザインとコードの境界を行き来しながら、小さな実験からプロダクトまで制作します。</p><a class="cta" href="#work">Explore work <span>↘</span></a></div>
-  <div class="hero-shape" aria-hidden="true"><div class="shape-core">4534</div></div>
-</section>
-<section class="marquee"><div>CREATE / TEST / SHIP / CREATE / TEST / SHIP /</div></section>
-<section id="work" class="section work">
-  <div class="section-head"><span>01 — SELECTED WORK</span><h2>つくったもの。</h2></div>
-  <div class="projects">
-    <article class="project featured"><div class="project-visual v1"><span>01</span><b>NEON<br>GRID</b></div><div class="project-info"><div><span>WEB EXPERIENCE</span><span>2026</span></div><h3>Neon Grid</h3><p>大胆なタイポグラフィとグリッドを使った、実験的なランディングページ。</p><button class="project-btn" data-project="Neon Grid">VIEW CASE ↗</button></div></article>
-    <article class="project"><div class="project-visual v2"><span>02</span><b>DATA<br>FLOW</b></div><div class="project-info"><div><span>DASHBOARD</span><span>2026</span></div><h3>Data Flow</h3><p>複雑な情報を視覚的に整理するダッシュボードUI。</p><button class="project-btn" data-project="Data Flow">VIEW CASE ↗</button></div></article>
-    <article class="project"><div class="project-visual v3"><span>03</span><b>MICRO<br>LAB</b></div><div class="project-info"><div><span>INTERACTION</span><span>2026</span></div><h3>Micro Lab</h3><p>ブラウザの中で動く、小さなインタラクションの実験集。</p><button class="project-btn" data-project="Micro Lab">VIEW CASE ↗</button></div></article>
-  </div>
-</section>
-<section id="about" class="section about">
-  <div class="section-head"><span>02 — ABOUT</span><h2>小さく作って、<br>大きく育てる。</h2></div>
-  <div class="about-grid"><p class="statement">4534は、Webデザインとフロントエンド開発を中心に、アイデアのプロトタイピングを行う個人スタジオです。</p><div class="facts"><div><span>FOCUS</span><b>Web / UI / Code</b></div><div><span>PROCESS</span><b>Think → Make → Test</b></div><div><span>LOCATION</span><b>Japan</b></div></div></div>
-</section>
-<section id="lab" class="section lab"><div class="section-head"><span>03 — LAB</span><h2>実験室。</h2></div><div class="lab-box"><div class="lab-copy"><span class="tag">INTERACTIVE</span><h3>Move your cursor.</h3><p>マウスの動きに反応するフィールド。画面上を動かしてみてください。</p></div><canvas id="labCanvas"></canvas></div></section>
-<section class="section capabilities"><div class="section-head"><span>04 — CAPABILITIES</span><h2>できること。</h2></div><div class="cap-grid"><div><b>01</b><h3>Direction</h3><p>コンセプト、情報設計、体験設計。</p></div><div><b>02</b><h3>Design</h3><p>UI、タイポグラフィ、レスポンシブ設計。</p></div><div><b>03</b><h3>Development</h3><p>HTML / CSS / JavaScriptによる実装。</p></div><div><b>04</b><h3>Prototype</h3><p>アイデアを素早く動く形にして検証。</p></div></div></section>
-<section id="contact" class="contact"><span>05 — CONTACT</span><h2>何かを<br><em>つくろう。</em></h2><p>このサイトも、すべてGitHub上のコードからできています。</p><a class="cta light" href="https://github.com/4534-jp/4534">GitHubへ ↗</a></section>
+  <section class="hero">
+    <div class="hero-topline">
+      <span>INDEPENDENT DIGITAL STUDIO</span>
+      <span>JAPAN / 2026</span>
+    </div>
+    <div class="hero-copy">
+      <p class="eyebrow">DESIGN × CODE × EXPERIMENT</p>
+      <h1>Ideas<br><i>in motion.</i></h1>
+      <p class="hero-description">Webを使って、アイデアを「動くもの」に変える。デザインとコードの境界を行き来しながら、小さな実験からプロダクトまで制作します。</p>
+      <a class="button" href="#work">Explore work <span>↘</span></a>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="hero-art-inner">4534</div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true"><div>CREATE / TEST / SHIP / CREATE / TEST / SHIP /</div></div>
+
+  <section id="work" class="section">
+    <div class="section-heading">
+      <p>01 — SELECTED WORK</p>
+      <h2>つくったもの。</h2>
+    </div>
+    <div class="project-grid">
+      <article class="project project-large">
+        <div class="project-art art-dark"><small>01</small><strong>NEON<br>GRID</strong></div>
+        <div class="project-body">
+          <div class="project-meta"><span>WEB EXPERIENCE</span><span>2026</span></div>
+          <h3>Neon Grid</h3>
+          <p>大胆なタイポグラフィとグリッドを使った、実験的なランディングページ。</p>
+          <button class="case-button" type="button" data-project="Neon Grid">VIEW CASE ↗</button>
+        </div>
+      </article>
+      <article class="project">
+        <div class="project-art art-stone"><small>02</small><strong>DATA<br>FLOW</strong></div>
+        <div class="project-body">
+          <div class="project-meta"><span>DASHBOARD</span><span>2026</span></div>
+          <h3>Data Flow</h3>
+          <p>複雑な情報を視覚的に整理するダッシュボードUI。</p>
+          <button class="case-button" type="button" data-project="Data Flow">VIEW CASE ↗</button>
+        </div>
+      </article>
+      <article class="project">
+        <div class="project-art art-blue"><small>03</small><strong>MICRO<br>LAB</strong></div>
+        <div class="project-body">
+          <div class="project-meta"><span>INTERACTION</span><span>2026</span></div>
+          <h3>Micro Lab</h3>
+          <p>ブラウザの中で動く、小さなインタラクションの実験集。</p>
+          <button class="case-button" type="button" data-project="Micro Lab">VIEW CASE ↗</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <div class="section about-inner">
+      <div class="section-heading">
+        <p>02 — ABOUT</p>
+        <h2>小さく作って、<br>大きく育てる。</h2>
+      </div>
+      <div class="about-grid">
+        <p class="about-lead">4534は、Webデザインとフロントエンド開発を中心に、アイデアのプロトタイピングを行う個人スタジオです。</p>
+        <div class="facts">
+          <div><span>FOCUS</span><b>Web / UI / Code</b></div>
+          <div><span>PROCESS</span><b>Think → Make → Test</b></div>
+          <div><span>LOCATION</span><b>Japan</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lab" class="section">
+    <div class="section-heading">
+      <p>03 — LAB</p>
+      <h2>実験室。</h2>
+    </div>
+    <div class="lab">
+      <div class="lab-copy">
+        <span class="lab-tag">INTERACTIVE</span>
+        <h3>Move your cursor.</h3>
+        <p>マウスやタッチの動きに反応するフィールド。画面上を動かしてみてください。</p>
+      </div>
+      <canvas id="labCanvas" aria-label="インタラクティブなパーティクルフィールド"></canvas>
+    </div>
+  </section>
+
+  <section class="section capabilities">
+    <div class="section-heading">
+      <p>04 — CAPABILITIES</p>
+      <h2>できること。</h2>
+    </div>
+    <div class="cap-grid">
+      <div><span>01</span><h3>Direction</h3><p>コンセプト、情報設計、体験設計。</p></div>
+      <div><span>02</span><h3>Design</h3><p>UI、タイポグラフィ、レスポンシブ設計。</p></div>
+      <div><span>03</span><h3>Development</h3><p>HTML / CSS / JavaScriptによる実装。</p></div>
+      <div><span>04</span><h3>Prototype</h3><p>アイデアを素早く動く形にして検証。</p></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="contact-inner">
+      <p>05 — CONTACT</p>
+      <h2>何かを<br><i>つくろう。</i></h2>
+      <div class="contact-bottom">
+        <span>このサイトも、すべてGitHub上のコードからできています。</span>
+        <a class="button" href="https://github.com/4534-jp/4534">GitHubへ ↗</a>
+      </div>
+    </div>
+  </section>
 </main>
-<footer><span>© 4534</span><span>BUILT WITH HTML / CSS / JS</span><a href="#top">BACK TO TOP ↑</a></footer>
-<div class="modal" aria-hidden="true"><div class="modal-card"><button class="modal-close">×</button><span>CASE STUDY</span><h3 id="modalTitle"></h3><p>これはデモ用のケーススタディです。実際の制作では、目的・設計・実装・検証までを一つのWeb体験として構成できます。</p><div class="modal-line"><span>ROLE</span><b>DESIGN / DEVELOPMENT</b></div><div class="modal-line"><span>STACK</span><b>HTML / CSS / JAVASCRIPT</b></div></div></div>
+
+<footer class="footer">
+  <span>© 4534</span>
+  <span>BUILT WITH HTML / CSS / JS</span>
+  <a href="#top">BACK TO TOP ↑</a>
+</footer>
+
+<div class="modal" aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" type="button" aria-label="閉じる">×</button>
+    <span>CASE STUDY</span>
+    <h3 id="modalTitle">Project</h3>
+    <p>これはデモ用のケーススタディです。目的・設計・実装・検証までを一つのWeb体験として構成できます。</p>
+    <div class="modal-row"><span>ROLE</span><b>DESIGN / DEVELOPMENT</b></div>
+    <div class="modal-row"><span>STACK</span><b>HTML / CSS / JAVASCRIPT</b></div>
+  </div>
+</div>
+
 <script src="script.js"></script>
-</body></html>
+</body>
+</html>
