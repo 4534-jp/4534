@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>4534 — Portfolio</title>
   <meta name="description" content="4534のポートフォリオサイト">
+  <meta name="theme-color" content="#18202b">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"></div>
   <header class="site-header">
     <a class="logo" href="#home">4534</a>
-    <button class="menu-button" aria-label="メニュー" aria-expanded="false">☰</button>
+    <div class="header-tools"><button class="theme-button" type="button" aria-label="テーマ切替">◐</button><button class="menu-button" aria-label="メニュー" aria-expanded="false">☰</button></div>
     <nav class="nav">
       <a href="index.html">ホーム</a>
       <a href="profile.html">プロフィール</a>
@@ -55,6 +57,16 @@
       </div>
     </section>
 
+    <section id="features" class="section feature-section">
+      <div class="section-heading"><p class="eyebrow">FEATURES</p><h2>動くサイト</h2></div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-icon">01</span><h3>ダークモード</h3><p>ボタンひとつで配色を切り替え。設定はブラウザに保存されます。</p></article>
+        <article class="feature-card"><span class="feature-icon">02</span><h3>スクロール演出</h3><p>コンテンツが画面に入ると自然に表示されるアニメーションを搭載。</p></article>
+        <article class="feature-card"><span class="feature-icon">03</span><h3>レスポンシブ</h3><p>スマートフォン、タブレット、PCの各画面幅に対応しています。</p></article>
+        <article class="feature-card"><span class="feature-icon">04</span><h3>コピー機能</h3><p>フッターのGitHub URLをワンクリックでコピーできます。</p></article>
+      </div>
+    </section>
+
     <section id="skills" class="section">
       <div class="section-heading"><p class="eyebrow">SKILLS</p><h2>できること</h2></div>
       <div class="skill-grid">
@@ -71,7 +83,8 @@
     </section>
   </main>
 
-  <footer><span>© 2026 4534</span><a href="#home">TOP ↑</a></footer>
+  <footer><span>© <span id="year">2026</span> 4534</span><div class="footer-actions"><button id="copy-link" type="button">URLをコピー</button><a href="#home">TOP ↑</a></div></footer>
+  <script src="script.js"></script>
   <script>
     const button = document.querySelector('.menu-button');
     const nav = document.querySelector('.nav');
